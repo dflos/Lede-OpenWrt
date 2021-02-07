@@ -5,7 +5,7 @@
 # 修改openwrt登陆地址,把下面的192.168.1.253修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
 
-# 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能使用中文）
+# 修改主机名字，把DFLOS修改你喜欢的就行（不能使用中文）
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='DFLOS'' package/default-settings/files/zzz-default-settings
 
 # 内核显示增加自己个性名称（YANG Yanhui build $(TZ=UTC-8 date "+%Y.%m.%d") @ 这些为后期增加）
